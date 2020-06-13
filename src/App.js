@@ -30,17 +30,11 @@ export default function App() {
   const [sortBy, setSortBy] = useState(undefined);
 
   useEffect(() => {
-    console.log("PP: ", partyParticipants);
-
     localStorage.setItem(
       "partyParticipants",
       JSON.stringify(partyParticipants)
     );
   }, [partyParticipants]);
-
-  useEffect(() => {
-    console.log("IS MATURE: ", typeof isMature);
-  }, [isMature]);
 
   const sortPartyParticpants = (nextSortBy) => {
     setPartyParticipants((unupdatedPartyParticipants) => {
