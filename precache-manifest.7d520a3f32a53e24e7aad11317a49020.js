@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ce9098445f15e192ef13ad0dba45233e",
+    "revision": "130bd0777a2bc05f1004588336691fe5",
     "url": "/sylwia/index.html"
   },
   {
-    "revision": "e15288d620aca51423f5",
+    "revision": "ffbd2147f93f814d3fa4",
     "url": "/sylwia/static/css/main.f3bbba0f.chunk.css"
   },
   {
-    "revision": "c1ed95f9bc95f0489ff3",
-    "url": "/sylwia/static/js/2.0ac883bb.chunk.js"
+    "revision": "18f8c76a469ebf7091de",
+    "url": "/sylwia/static/js/2.775a349d.chunk.js"
   },
   {
     "revision": "aa754ba9f73776ab5291549b6092b0f0",
-    "url": "/sylwia/static/js/2.0ac883bb.chunk.js.LICENSE.txt"
+    "url": "/sylwia/static/js/2.775a349d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e15288d620aca51423f5",
-    "url": "/sylwia/static/js/main.bd3130d8.chunk.js"
+    "revision": "ffbd2147f93f814d3fa4",
+    "url": "/sylwia/static/js/main.b043b79b.chunk.js"
   },
   {
     "revision": "7bf4d5f4bed66f2f7a6a",

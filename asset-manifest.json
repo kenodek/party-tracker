@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/sylwia/static/css/main.f3bbba0f.chunk.css",
-    "main.js": "/sylwia/static/js/main.bd3130d8.chunk.js",
-    "main.js.map": "/sylwia/static/js/main.bd3130d8.chunk.js.map",
+    "main.js": "/sylwia/static/js/main.b043b79b.chunk.js",
+    "main.js.map": "/sylwia/static/js/main.b043b79b.chunk.js.map",
     "runtime-main.js": "/sylwia/static/js/runtime-main.3cb7fad8.js",
     "runtime-main.js.map": "/sylwia/static/js/runtime-main.3cb7fad8.js.map",
-    "static/js/2.0ac883bb.chunk.js": "/sylwia/static/js/2.0ac883bb.chunk.js",
-    "static/js/2.0ac883bb.chunk.js.map": "/sylwia/static/js/2.0ac883bb.chunk.js.map",
+    "static/js/2.775a349d.chunk.js": "/sylwia/static/js/2.775a349d.chunk.js",
+    "static/js/2.775a349d.chunk.js.map": "/sylwia/static/js/2.775a349d.chunk.js.map",
     "index.html": "/sylwia/index.html",
-    "precache-manifest.aaeac9472741197a4577e35327ad3bc9.js": "/sylwia/precache-manifest.aaeac9472741197a4577e35327ad3bc9.js",
+    "precache-manifest.7d520a3f32a53e24e7aad11317a49020.js": "/sylwia/precache-manifest.7d520a3f32a53e24e7aad11317a49020.js",
     "service-worker.js": "/sylwia/service-worker.js",
     "static/css/main.f3bbba0f.chunk.css.map": "/sylwia/static/css/main.f3bbba0f.chunk.css.map",
-    "static/js/2.0ac883bb.chunk.js.LICENSE.txt": "/sylwia/static/js/2.0ac883bb.chunk.js.LICENSE.txt"
+    "static/js/2.775a349d.chunk.js.LICENSE.txt": "/sylwia/static/js/2.775a349d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3cb7fad8.js",
-    "static/js/2.0ac883bb.chunk.js",
+    "static/js/2.775a349d.chunk.js",
     "static/css/main.f3bbba0f.chunk.css",
-    "static/js/main.bd3130d8.chunk.js"
+    "static/js/main.b043b79b.chunk.js"
   ]
 }
