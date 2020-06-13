@@ -9,7 +9,7 @@ export const compareByName = (a, b) => {
 };
 
 export const compareByIsMature = (a, b) => {
-  return a.isMature === b.isMature ? 0 : a.isMature ? -1 : 1;
+  return a.isMature === b.isMature ? 0 : a.isMature === "true" ? -1 : 1;
 };
 
 export const compareByStatus = (a, b) => {

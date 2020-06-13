@@ -24,10 +24,11 @@ const getInitialState = () => {
 
 export default function App() {
   const [name, setName] = useState("");
-  const [isMature, setIsMature] = useState(undefined);
-  const [status, setStatus] = useState(undefined);
+  const [isMature, setIsMature] = useState("false");
+  const [status, setStatus] = useState("Przyjdzie");
   const [partyParticipants, setPartyParticipants] = useState(getInitialState);
   const [sortBy, setSortBy] = useState(undefined);
+  const [isReverse, setIsReverse] = useState(false);
 
   useEffect(() => {
     localStorage.setItem(
@@ -38,24 +39,33 @@ export default function App() {
 
   const sortPartyParticpants = (nextSortBy) => {
     setPartyParticipants((unupdatedPartyParticipants) => {
+      console.log("UNUPDATED: ", unupdatedPartyParticipants);
       let copiedPartyParticipants = [...unupdatedPartyParticipants];
-
-      if (nextSortBy === sortBy) {
-        return copiedPartyParticipants.reverse();
-      }
 
       switch (nextSortBy) {
         case SORT_BY.NAME:
-          return copiedPartyParticipants.sort(compareByName);
+          copiedPartyParticipants.sort(compareByName);
+          break;
 
         case SORT_BY.IS_MATURE:
-          return copiedPartyParticipants.sort(compareByIsMature);
+          copiedPartyParticipants.sort(compareByIsMature);
+          break;
 
         case SORT_BY.STATUS:
-          return copiedPartyParticipants.sort(compareByStatus);
+          copiedPartyParticipants.sort(compareByStatus);
+          console.log("SORT BY STATUS: ");
+          break;
 
         default:
-          return unupdatedPartyParticipants;
+          break;
+      }
+
+      if (isReverse) {
+        setIsReverse(false);
+        return copiedPartyParticipants.reverse();
+      } else {
+        setIsReverse(true);
+        return copiedPartyParticipants;
       }
     });
 
@@ -97,13 +107,9 @@ export default function App() {
 
   const changeIsMature = (isMature, index) => {
     setPartyParticipants((prevState) => {
-      return prevState.map((participant, idx) => {
-        if (idx === index) {
-          participant.isMature = isMature;
-        }
-
-        return participant;
-      });
+      const newState = [...prevState];
+      newState[index].isMature = isMature;
+      return newState;
     });
   };
 
