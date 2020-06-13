@@ -7,71 +7,79 @@ $breakpoint: 920px;
 $input-width: 300px;
 
 table {
-    border: 1px solid $blue;
-    border-collapse: collapse;
-    margin-top: 40px;
-    width: 100%;
+  border: 1px solid $blue;
+  border-collapse: collapse;
+  margin-top: 40px;
+  width: 100%;
 }
 
 @media screen and (min-width: $breakpoint) {
-    table {
-        width: 50%;
-    }
+  table {
+    width: 50%;
+  }
 }
 
 thead {
-    background-color: #2e7d32;
+  background-color: #2e7d32;
 }
 
 td,
 th {
-    border: 1px solid gray;
-    padding: 5px;
-    letter-spacing: 2px;
-    color: white;
+  border: 1px solid gray;
+  padding: 5px;
+  letter-spacing: 2px;
+  color: white;
+  position: relative;
 }
 
 th {
-    border: 1px solid white;
+  border: 1px solid white;
 }
 
 td select {
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background-color: $dark-gray;
-    color: white;
-    appearance: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: $dark-gray;
+  color: white;
+  appearance: none;
 }
 
 td input {
-    border: 1px solid transparent;
-    outline-width: 0px;
-    background-color: $dark-gray;
-    color: white;
+  border: 1px solid transparent;
+  outline-width: 0px;
+  background-color: $dark-gray;
+  color: white;
+  width: 100px;
+
+  @media screen and (min-width: $breakpoint) {
+    width: 90%;
+  }
 }
 
 td input:focus {
-    border: 1px solid $blue;
+  border: 1px solid $blue;
 }
 
 tr:nth-child(even) {
-    background-color: $complementary-gray;
+  background-color: $complementary-gray;
 }
 
 tr:nth-child(even) select,
 tr:nth-child(even) input {
-    background-color: $complementary-gray;
+  background-color: $complementary-gray;
 }
 
 .button-delete {
-    background-color: Transparent;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    visibility: hidden;
+  background-color: Transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  visibility: hidden;
+  position: absolute;
+  right: 10px;
 }
 
 tbody tr:hover .button-delete {
-    visibility: visible;
+  visibility: visible;
 }

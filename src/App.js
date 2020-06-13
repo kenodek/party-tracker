@@ -39,7 +39,6 @@ export default function App() {
 
   const sortPartyParticpants = (nextSortBy) => {
     setPartyParticipants((unupdatedPartyParticipants) => {
-      console.log("UNUPDATED: ", unupdatedPartyParticipants);
       let copiedPartyParticipants = [...unupdatedPartyParticipants];
 
       switch (nextSortBy) {
@@ -53,7 +52,6 @@ export default function App() {
 
         case SORT_BY.STATUS:
           copiedPartyParticipants.sort(compareByStatus);
-          console.log("SORT BY STATUS: ");
           break;
 
         default:

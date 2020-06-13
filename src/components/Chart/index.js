@@ -33,13 +33,12 @@ const Charts = memo(({ partyParticipants }) => {
   return (
     <div className="container-summary">
       <div className="text-summary">Podsumowanie</div>
-      <ResponsiveContainer width={400} height={300}>
+      <ResponsiveContainer width={"100%"} height={300}>
         <PieChart>
           <Pie
             activeIndex={activeIndex}
             activeShape={renderActiveShape}
             data={data}
-            cx={200}
             cy={150}
             innerRadius={60}
             outerRadius={80}
