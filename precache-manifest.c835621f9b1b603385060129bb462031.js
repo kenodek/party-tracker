@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "093837cac9fb7b2e86c8085d7c8064b9",
+    "revision": "059c88fa502f259ebb458ced0e344042",
     "url": "/sylwia/index.html"
   },
   {
-    "revision": "78e05197886a01205f91",
+    "revision": "2998cf7971bb16ef8cfc",
     "url": "/sylwia/static/css/main.818f56f9.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sylwia/static/js/2.775a349d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "78e05197886a01205f91",
-    "url": "/sylwia/static/js/main.fcefa108.chunk.js"
+    "revision": "2998cf7971bb16ef8cfc",
+    "url": "/sylwia/static/js/main.cf8046dc.chunk.js"
   },
   {
     "revision": "7bf4d5f4bed66f2f7a6a",

@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/sylwia/static/css/main.818f56f9.chunk.css",
-    "main.js": "/sylwia/static/js/main.fcefa108.chunk.js",
-    "main.js.map": "/sylwia/static/js/main.fcefa108.chunk.js.map",
+    "main.js": "/sylwia/static/js/main.cf8046dc.chunk.js",
+    "main.js.map": "/sylwia/static/js/main.cf8046dc.chunk.js.map",
     "runtime-main.js": "/sylwia/static/js/runtime-main.3cb7fad8.js",
     "runtime-main.js.map": "/sylwia/static/js/runtime-main.3cb7fad8.js.map",
     "static/js/2.775a349d.chunk.js": "/sylwia/static/js/2.775a349d.chunk.js",
     "static/js/2.775a349d.chunk.js.map": "/sylwia/static/js/2.775a349d.chunk.js.map",
     "index.html": "/sylwia/index.html",
-    "precache-manifest.ba57ab00e217eda3092f265de35a8720.js": "/sylwia/precache-manifest.ba57ab00e217eda3092f265de35a8720.js",
+    "precache-manifest.c835621f9b1b603385060129bb462031.js": "/sylwia/precache-manifest.c835621f9b1b603385060129bb462031.js",
     "service-worker.js": "/sylwia/service-worker.js",
     "static/css/main.818f56f9.chunk.css.map": "/sylwia/static/css/main.818f56f9.chunk.css.map",
     "static/js/2.775a349d.chunk.js.LICENSE.txt": "/sylwia/static/js/2.775a349d.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.3cb7fad8.js",
     "static/js/2.775a349d.chunk.js",
     "static/css/main.818f56f9.chunk.css",
-    "static/js/main.fcefa108.chunk.js"
+    "static/js/main.cf8046dc.chunk.js"
   ]
 }
