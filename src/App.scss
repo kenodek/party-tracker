@@ -1,0 +1,110 @@
+$gray: #f2f2f2;
+$green: #4caf50;
+$dark-gray: #222930;
+$complementary-gray: #333a40;
+$blue: #1abb9c;
+$breakpoint: 1070px;
+$input-width: 300px;
+
+body {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+  padding: 20px;
+  background-color: $dark-gray;
+}
+
+.table-cell__number {
+  text-align: center;
+}
+
+#flex-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0px;
+
+  @media screen and (min-width: $breakpoint) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+#input-participant {
+  width: 80%;
+  height: 30px;
+
+  padding: 2px 5px;
+  border: 1px solid $blue;
+  border-radius: 2px;
+  outline: none;
+  margin-right: 25px;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $breakpoint) {
+    width: $input-width;
+    height: 26px;
+  }
+}
+
+label {
+  margin-right: 10px;
+  letter-spacing: 1px;
+}
+
+fieldset {
+  border-color: rgba(255, 255, 255, 0.4);
+  border-style: solid;
+  border-width: 1px;
+  padding: 15px;
+  color: white;
+  margin: 0px;
+
+  select {
+    width: 80%;
+    height: 30px;
+    padding: 2px 5px;
+    border: 1px solid $blue;
+    border-radius: 2px;
+    outline: none;
+    margin-right: 25px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+
+  input[type="submit"] {
+    height: 36px;
+    width: auto;
+    padding: 2px 20px;
+    color: white;
+    background-color: #ec407a;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    margin-left: auto;
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: $breakpoint) {
+    select {
+      width: 140px;
+      height: 26px;
+    }
+  }
+}
+
+.container-data {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 0px;
+}

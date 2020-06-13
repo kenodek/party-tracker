@@ -1,0 +1,77 @@
+$gray: #f2f2f2;
+$green: #4caf50;
+$dark-gray: #222930;
+$complementary-gray: #333a40;
+$blue: #1abb9c;
+$breakpoint: 920px;
+$input-width: 300px;
+
+table {
+    border: 1px solid $blue;
+    border-collapse: collapse;
+    margin-top: 40px;
+    width: 100%;
+}
+
+@media screen and (min-width: $breakpoint) {
+    table {
+        width: 50%;
+    }
+}
+
+thead {
+    background-color: #2e7d32;
+}
+
+td,
+th {
+    border: 1px solid gray;
+    padding: 5px;
+    letter-spacing: 2px;
+    color: white;
+}
+
+th {
+    border: 1px solid white;
+}
+
+td select {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: $dark-gray;
+    color: white;
+    appearance: none;
+}
+
+td input {
+    border: 1px solid transparent;
+    outline-width: 0px;
+    background-color: $dark-gray;
+    color: white;
+}
+
+td input:focus {
+    border: 1px solid $blue;
+}
+
+tr:nth-child(even) {
+    background-color: $complementary-gray;
+}
+
+tr:nth-child(even) select,
+tr:nth-child(even) input {
+    background-color: $complementary-gray;
+}
+
+.button-delete {
+    background-color: Transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    visibility: hidden;
+}
+
+tbody tr:hover .button-delete {
+    visibility: visible;
+}
