@@ -2,8 +2,21 @@ import React, { useState, useEffect, memo } from "react";
 import { PieChart, Pie, Sector, ResponsiveContainer } from "recharts";
 import "./index.scss";
 import { getText } from "../../utils/functions";
+import { STATUSES } from "../../utils/constants";
 
-const Charts = memo(({ partyParticipants }) => {
+const Charts = ({ partyParticipants }) => {
+  return (
+    <div className="container-summary">
+      <div className="text-summary">Podsumowanie</div>
+      <ChartByAdultness partyParticipants={partyParticipants} />
+      <ChartByStatus partyParticipants={partyParticipants} />
+    </div>
+  );
+};
+
+export default Charts;
+
+const ChartByAdultness = memo(({ partyParticipants }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [data, setData] = useState([]);
 
@@ -31,26 +44,82 @@ const Charts = memo(({ partyParticipants }) => {
   };
 
   return (
-    <div className="container-summary">
-      <div className="text-summary">Podsumowanie</div>
-      <ResponsiveContainer width="100%" aspect={2}>
-        <PieChart>
-          <Pie
-            activeIndex={activeIndex}
-            activeShape={renderActiveShape}
-            data={data}
-            innerRadius={"50%"}
-            outerRadius={"55%"}
-            fill="dodgerblue"
-            onMouseEnter={onPieEnter}
-          />
-        </PieChart>
-      </ResponsiveContainer>
-    </div>
+    <ResponsiveContainer width="100%" aspect={2}>
+      <PieChart>
+        <Pie
+          activeIndex={activeIndex}
+          activeShape={renderActiveShape}
+          data={data}
+          innerRadius={"50%"}
+          outerRadius={"55%"}
+          fill="dodgerblue"
+          onMouseEnter={onPieEnter}
+        />
+      </PieChart>
+    </ResponsiveContainer>
   );
 });
 
-export default Charts;
+const ChartByStatus = memo(({ partyParticipants }) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    setData(prepareData(partyParticipants));
+  }, [partyParticipants]);
+
+  const prepareData = (partyParticipants) => {
+    const present = { name: "Przyjdą", value: 0 };
+    const absent = { name: "Nie przyjdą", value: 0 };
+    const undecided = { name: "Nie wiedzą", value: 0 };
+    const unanswered = { name: "Nie odpisali", value: 0 };
+
+    [...partyParticipants].forEach((participant, index) => {
+      switch (participant.status) {
+        case STATUSES.PRZYJDZIE:
+          present.value++;
+          break;
+
+        case STATUSES.NIE_PRZYJDZIE:
+          absent.value++;
+          break;
+
+        case STATUSES.NIE_WIE:
+          undecided.value++;
+          break;
+
+        case STATUSES.NIE_ODPISAŁ:
+          unanswered.value++;
+          break;
+
+        default:
+          break;
+      }
+    });
+
+    return [present, absent, undecided, unanswered];
+  };
+
+  const onPieEnter = (data, index) => {
+    setActiveIndex(index);
+  };
+
+  return (
+    <ResponsiveContainer width="100%" aspect={2}>
+      <PieChart>
+        <Pie
+          activeIndex={activeIndex}
+          activeShape={renderActiveShape}
+          data={data}
+          innerRadius={"50%"}
+          outerRadius={"55%"}
+          fill="dodgerblue"
+          onMouseEnter={onPieEnter}
+        />
+      </PieChart>
+    </ResponsiveContainer>
+  );
+});
 
 const renderActiveShape = (props) => {
   const RADIAN = Math.PI / 180;

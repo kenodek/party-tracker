@@ -153,18 +153,20 @@ export default function App() {
         </fieldset>
       </form>
 
-      <div className="container-data">
-        <PartyParticipantsTable
-          partyParticipants={partyParticipants}
-          sortPartyParticpants={sortPartyParticpants}
-          removeParticipant={removeParticipant}
-          changeName={changeName}
-          changeStatus={changeStatus}
-          changeIsMature={changeIsMature}
-        />
+      {partyParticipants.length && (
+        <div className="container-data">
+          <PartyParticipantsTable
+            partyParticipants={partyParticipants}
+            sortPartyParticpants={sortPartyParticpants}
+            removeParticipant={removeParticipant}
+            changeName={changeName}
+            changeStatus={changeStatus}
+            changeIsMature={changeIsMature}
+          />
 
-        <Charts partyParticipants={partyParticipants} />
-      </div>
+          <Charts partyParticipants={partyParticipants} />
+        </div>
+      )}
     </>
   );
 }
