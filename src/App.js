@@ -10,14 +10,6 @@ import { SORT_BY } from "./utils/constants";
 import Charts from "./components/Chart";
 import Header from "./components/Header";
 
-const initialState = [
-  { name: "Dominik", isMature: true, status: "Przyjdzie" },
-  { name: "Mateusz", isMature: true, status: "Przyjdzie" },
-  { name: "Danuta", isMature: true, status: "Przyjdzie" },
-  { name: "Marek", isMature: true, status: "Nie wie" },
-  { name: "Wiktor", isMature: false, status: "Nie odpisał" },
-];
-
 const getInitialState = () => {
   return JSON.parse(localStorage.getItem("partyParticipants")) || [];
 };
@@ -116,7 +108,7 @@ export default function App() {
       <Header />
       <form id="form" onSubmit={(event) => handleAddPartyParticipant(event)}>
         <fieldset form="form">
-          <legend>Dodaj nowego uczestnika 18 urodzin Sylwii </legend>
+          <legend>Dodaj nowego uczestnika</legend>
 
           <div id="flex-container">
             <label htmlFor="input-participant">Imię i nazwisko: </label>
@@ -153,7 +145,7 @@ export default function App() {
         </fieldset>
       </form>
 
-      {partyParticipants.length && (
+      {partyParticipants.length > 0 && (
         <div className="container-data">
           <PartyParticipantsTable
             partyParticipants={partyParticipants}
